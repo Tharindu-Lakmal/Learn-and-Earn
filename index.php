@@ -77,7 +77,7 @@
 
             <!-- second child -->
             <div class="heading">
-                <h1>Student-Made Marketplace: Empowering<br>the Next Generation of Entrepreneurs</h1>
+                <h1>Sfffffgfddfgtudent-Made Marketplace: Empowering<br>the Next Generation of Entrepreneurs</h1>
                 <p>Where Student Talent Shines, and Dreams Become Sales!</p>
 
                 <div class="heading-sub">
