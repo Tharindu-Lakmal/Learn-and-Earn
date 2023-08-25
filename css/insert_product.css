@@ -65,7 +65,7 @@ body {
     background-color: rgb(0, 0, 0, 0.2);
     margin: 20px 0;
     border: 0;
-}
+}   
 .btn-p:hover{
     color: white;
     background-color: #000000;
@@ -172,5 +172,13 @@ body {
 }
 .footer p{
     color: white;
+}
+
+.heading-sub{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    padding: 0;
+    background-color: #00dd00;
 }
 /* end of footer */

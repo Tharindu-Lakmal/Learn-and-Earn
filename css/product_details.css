@@ -36,7 +36,18 @@ body {
     padding: 1px 20px;
     background-color: transparent;
     border: 3px solid #00dd00;
+    border-radius: 20px;
+    
 }
+.shopping{
+    padding: 1px 20px;
+    background-color: transparent;
+    border: 3px solid #00dd00;
+    border-radius: 20px;
+    color: black;
+}
+
+
 .cart{
     text-decoration: none;
     margin-left: 20px;
@@ -80,10 +91,24 @@ body {
     color: black;
     background-color: white;
 }
+/* cart page check button */
+.check{
+    color: black;
+}
+.check:hover{
+    color: white;
+    background-color: black;
+}
+
 .btn:hover{
     background-color: #00dd00;
 }
 .register:hover{
+    color: white;
+    background-color: #00dd00;
+}
+
+.shopping:hover{
     color: white;
     background-color: #00dd00;
 }
@@ -110,11 +135,14 @@ body {
     color: rgb(0, 0, 0);
 }
 .heading-sub{
+    background-color: blue;
     display: flex;
     /* margin-top: 55px; */
     border: 1px solid black;
     padding-top: 7px;
     height: 40px;
+
+
 }
 .heading-sub ul{
     display: flex;
@@ -234,6 +262,7 @@ body {
     height: 150px;
     background-color: black;
     margin-top: 30px;
+    margin-bottom: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,6 +270,30 @@ body {
 .footer p{
     color: white;
 }
+
+
+/* cart page */
+
+.corr{
+    background-color: #00dd00;
+}
+
+.table{
+    background-color: #8E8E8E;
+    
+}
+
+table, th, tr {
+    border: 3px solid white;
+   
+    /* border-collapse: collapse; */
+  }
+
+  .cart_img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
 /* end of footer */
 /* end of main section */
 
@@ -249,3 +302,6 @@ body {
 
 
 /* End of Insert products */
+
+/* table  */
+
