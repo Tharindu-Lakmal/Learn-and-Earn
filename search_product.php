@@ -3,6 +3,7 @@
 <?php
     include('connection.php');
     include('functions/common_function.php');
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS link -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 <body>
@@ -57,10 +58,10 @@
                             <a class="n-link register" href="#">Register</a>
                             </li>
                             <li class="nav-item">
-                            <a class="cart" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #00dd00;"></i><sup>1</sup></a>
+                            <a class="cart" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #00dd00;"></i><sup><?php cart_item(); ?></sup></a>
                             </li>
                             <li class="nav-item">
-                            <a class="tprice" href="#">Total Price:100/-</a>
+                                <a class="tprice" href="#">Total Price:<?php total_cart_price() ?>/-</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search" action="search_product.php" mehtod="get">
@@ -73,6 +74,13 @@
                     </div>
                 </div>
             </nav>
+
+            <!--            ******calling cart function  -->
+
+            <?php
+            cart();
+
+            ?>
             <!-- end first child -->
 
             <!-- second child -->
@@ -83,9 +91,20 @@
                 <div class="heading-sub">
                     <ul>
                         <li><p>Welcome Guest</p></li>
-                        <li>
-                            <a class="btn-login" href="#">Login</a>
-                        </li>
+                        <?php
+                if(!isset($_SESSION['username'])){
+                    echo "  <li>
+                        <a class='btn-login' href='user_login.php'>Login</a>
+                    </li>";
+                    
+                }else{
+                    echo " <li>
+                    <a class='btn-login' href='user_logout.php'>Logout</a>
+                </li>";
+
+                }
+                    
+                    ?>
                     </ul>
                 </div>
             </div>
