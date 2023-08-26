@@ -94,7 +94,11 @@
             <!-- second child -->
             <nav class="heading-sub mb-4" style="background-color: #00dd00;">
                 <ul>
-                    <li><p>Welcome Guest</p></li>
+                <li><p>Welcome <?php if(isset($_SESSION['username'])){
+                            echo $_SESSION['username'];
+                        }else{
+                            echo "guest"; 
+                        } ?></p></li>
 
                     <?php
                 if(!isset($_SESSION['username'])){

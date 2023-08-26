@@ -82,7 +82,11 @@
 
                 <div class="heading-sub">
                     <ul>
-                        <li><p>Welcome Guest</p></li>
+                    <li><p>Welcome <?php if(isset($_SESSION['username'])){
+                            echo $_SESSION['username'];
+                        }else{
+                            echo"guest"; 
+                        } ?></p></li>
                         <li>
                             <a class="btn-login" href="#">Login</a>
                         </li>
