@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* display: flexbox; */
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    width: 12%;
+    height: 6%;
+}
+/* main section */
+
+
+/* navbar */
+.navbar{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+.n-link{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px;
+    background-color: #00dd00;
+    margin: 0 10px;
+}
+.register{
+    padding: 1px 20px;
+    background-color: transparent;
+    border: 3px solid #00dd00;
+}
+.cart{
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.cart sup{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #00dd00;
+}
+.tprice{
+    padding-left: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+.form-control{
+    width: 264px;
+    height: 28px;
+    border-radius: 20px;
+    opacity: 60%;
+    font-size: 16px;
+}
+.form-control::placeholder{
+    color: rgba(0, 0, 0, 0.407);
+    padding-left: 2px;
+}
+.btn{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px;
+    background-color: #00dd00b7;
+    margin: 0 10px;
+    border: 0;
+}
+.n-link:hover{
+    color: black;
+    background-color: white;
+}
+.btn:hover{
+    background-color: #00dd00;
+}
+.register:hover{
+    color: white;
+    background-color: #00dd00;
+}
+/* navbar end */
+
+/* heading */
+.heading{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.heading h1{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+.heading p{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+.heading-sub{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    background-color: #00dd00;
+}
+.heading-sub ul{
+    display: flex;
+    padding: 0;
+}
+.heading-sub ul li{
+    text-decoration: none;
+    list-style: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.heading-sub ul li a{
+    text-decoration: none;
+}
+.btn-login{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px;
+    background-color: black;
+}
+.btn-login:hover{
+    color: black;
+    background-color: white;
+}
+/* end of heading */
+
+/* user profile */
+.profile_img{
+    width: 150px;
+    height: auto;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* end of user profile */
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: white;
+}
+/* end of footer */
+/* end of main section */
+
+.link2{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 2px 20px;
+    margin: 0 10px;
+}
