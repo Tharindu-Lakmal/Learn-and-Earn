@@ -18,8 +18,8 @@
         $user_email=$_POST['user_email'];
         $user_address=$_POST['user_address'];
         $user_mobile=$_POST['user_mobile'];
-        $user_image1=$_FILES['user_image']['name'];
-        $user_image_tmp=$_FILES['user_image']['tmp'];
+        $user_image=$_FILES['user_image']['name'];
+        $user_image_tmp=$_FILES['user_image']['tmp_name'];
         move_uploaded_file($user_image_tmp, "user_images/$user_image");
 
         //update query
@@ -30,6 +30,7 @@
 
         if($result_query_update) {
             echo "<script>alert('Date update successfuly')</script>";
+            echo "<script>window.open('profile.php','_self')</script>";
         }
     }
 ?>
@@ -39,7 +40,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earn&Learn | Insert Products</title>
+    <title>Earn&Learn | Edit Account</title>
 
     <link rel="icon" href="Image/logo.png" />
 
@@ -76,7 +77,7 @@
                     <label for="Enter Name" class="form-label">
                         Name
                     </label>
-                    <input type="text" name="user_username" value="<?php echo $username?>" id="Enter Name" class="form-control" 
+                    <input type="text" name="user_name" value="<?php echo $username?>" id="Enter Name" class="form-control" 
                     placeholder="Enter Name">
                 </div>
 

@@ -46,10 +46,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                            <a class="n-link" aria-current="page" href="#">Home</a>
+                            <a class="n-link" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
-                            <a class="n-link" href="#">Products</a>
+                            <a class="n-link" href="all_products.php">Products</a>
                             </li>
                             <li class="nav-item">
                             <a class="n-link" href="#">Contact</a>
