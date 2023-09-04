@@ -98,7 +98,7 @@ if(isset($_POST['user_login'])){
             }else{
                 $_SESSION['username'] = $user_username;
                 echo "<script>alert('Login successful')</script>";
-                echo "<script>window.open('payment.php','_self')</script>";
+                echo "<script>window.open('index.php','_self')</script>";
             }
 
         }else{

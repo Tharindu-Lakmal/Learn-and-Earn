@@ -67,13 +67,13 @@
                             <a class="tprice" href="#">Total Price:<?php total_cart_price() ?>/-</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search" action="search_product.php" mehtod="get">
+                        <!-- <form class="d-flex" role="search" action="search_product.php" mehtod="get">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                                 <button class="btn btn-outline-success" type="submit">Search</button>
 
-                            <input type="submit" value="Search" class="btn" name="search_data_product">
+                             <input type="submit" value="Search" class="btn" name="search_data_product">
 
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </nav>
@@ -170,6 +170,9 @@
                 }
                 if(isset($_GET['my_orders'])) {
                     include('user_orders.php');
+                }
+                if(isset($_GET['delete_account'])) {
+                    include('delete_account.php');
                 }
             ?>
          </div>                

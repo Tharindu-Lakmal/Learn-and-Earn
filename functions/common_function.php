@@ -455,7 +455,7 @@ function get_user_order_details() {
 
 function footer() {
     echo "<div class='footer'>
-        <p>All rights reserved @ - Designed by Team 6 - 2023</p>
+        <p>All rights reserved <i class='fa-regular fa-copyright' style='color: #fffff;'></i> - Designed by Team 6 - 2023</p>
     </div>";
 }
 ?>

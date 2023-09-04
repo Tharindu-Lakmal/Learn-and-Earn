@@ -100,7 +100,7 @@
                             Profile Picture
                         </label> -->
                         <input type="file" name="user_image" id="User_image" class="form-control" required="required">
-                        <img src="./user_images/<?php echo $user_image?>" alt="" class="profile_img">
+                        <!-- <img src="./user_images/<?php echo $user_image?>" alt="" class="profile_img"> -->
                     </div>
                 </div>
 
