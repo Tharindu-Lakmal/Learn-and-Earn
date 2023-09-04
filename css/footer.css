@@ -1,0 +1,30 @@
+/* footer start*/
+.footer{
+    width: 100%; 
+    height: auto; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    margin-top: 40px;
+}
+.footer-h h4{
+    margin-bottom: 30px;
+    color: black;
+}
+.footer-h ul{
+    list-style: none;
+    padding-left: 10px;
+}
+.footer-h ul li{
+    margin-bottom: 10px;
+}
+.footer-h ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.footer-h ul li a:hover{
+    text-decoration:underline;
+    color: rgb(0, 0, 0);
+}
+.contact ul li a{
+    margin-left: 10px;
+}
+/* footer end */

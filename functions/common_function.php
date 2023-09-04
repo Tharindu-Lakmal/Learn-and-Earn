@@ -12,7 +12,7 @@ function getproducts() {
     if(!isset($_GET['category'])) {
         if(!isset($_GET['brand'])) {
 
-            $select_query = "Select * from products order by rand() limit 0,5"; //limit 0,5
+            $select_query = "Select * from products order by rand() limit 0,6"; //limit 0,5
             $result_query = mysqli_query($con, $select_query);
             // $row = mysqli_fetch_assoc($result_query);
             // echo $row['product_title'];
@@ -260,7 +260,7 @@ function get_all_products() {
                             <p class='card-text'>$product_description</p>
                             <p class='card-text'>Price: $product_price/-</p>
                              <a href='index.php?add_to_cart= $product_id' class='btn btn-p'>Add to cart</a>
-                            <a href='index.php' class='btn-v '>Go Home</a>
+                            <a href='index.php' class='btn-v '>View more</a>
                         </div>
                     </div>
                 </div>";
@@ -455,7 +455,52 @@ function get_user_order_details() {
 
 function footer() {
     echo "<div class='footer'>
-        <p>All rights reserved <i class='fa-regular fa-copyright' style='color: #fffff;'></i> - Designed by Team 6 - 2023</p>
-    </div>";
+    <div class='container pt-5'>
+        <div class='row' style='margin-bottom: 50px;'>
+            <div class='col-md-3 help-center footer-h'>
+                <h4>HELP CENTER</h4>
+                <ul class='footer-ul'>
+                    <li><a href='#'>How to Pay</a></li>
+                    <li><a href='#'>FAQ’S</a></li>
+                    <li><a href='#'>Delivery info</a></li>
+                </ul>
+            </div>
+            <div class='col-md-3 customer-info footer-h'>
+                <h4>CUSTOMER INFORMATION</h4>
+                <ul class='footer-ul'>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='#'>FAQ’S</a></li>
+                    <li><a href='#'>Contact Us</a></li>
+                    <li><a href='#'>Sell Your Items</a></li>
+                </ul>
+            </div>
+            <div class='col-md-3 security footer-h'>
+                <h4>SECURITY & PRIVACY</h4>
+                <ul class='footer-ul'>
+                    <li><a href='#'>Terms of Use</a></li>
+                    <li><a href='#'>Privacy Policy</a></li>
+                    <li><a href='#'>Return/ Refund Policy</a></li>
+                    <li><a href='#'>Store Location</a></li>
+                </ul>
+            </div>
+            <div class='col-md-3 contact footer-h'>
+                <h4>CONTACT</h4>
+                <ul class='footer-ul'>
+                    <li><i class='fa-solid fa-phone' style='color: #000000;'></i><a href='#'>Phone: (+94) 443456333</a></li>
+                    <li><i class='fa-solid fa-envelope' style='color: #000000;'></i><a href='#'>Email: learnandearn@mail.com</a></li>
+                    <li><i class='fa-brands fa-instagram' style='color: #000000;'></i><a href='#'>Instagram</a></li>
+                    <li><i class='fa-brands fa-facebook' style='color: #000000;'></i><a href='#'>Facebook</a></li>
+                    <li><i class='fa-brands fa-youtube' style='color: #000000;'></i><a href='#'>Youtube</a></li>
+                    <li><i class='fa-brands fa-twitter' style='color: #000000;'></i><a href='#'>Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class='row text-center'>
+            <p style='color: black'>All rights reserved <i class='fa-regular fa-copyright' style='color: #000000;'></i> - Designed by Team 6 | Learn&Earn - 2023</p>
+        </div>
+    </div>
+    </div>
+    ";
 }
 ?>

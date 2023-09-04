@@ -29,6 +29,7 @@
 
     <!-- CSS link -->
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css\footer.css">
 
 </head>
 <style>

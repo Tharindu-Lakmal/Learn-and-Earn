@@ -29,6 +29,7 @@
 
     <!-- CSS link -->
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css\footer.css">
 
 </head>
 <body>

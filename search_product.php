@@ -29,6 +29,7 @@
 
     <!-- CSS link -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css\footer.css">
 
 </head>
 <body>
@@ -54,9 +55,21 @@
                             <li class="nav-item">
                             <a class="n-link" href="#">Contact</a>
                             </li>
-                            <li class="nav-item">
-                            <a class="n-link register" href="#">Register</a>
-                            </li>
+                            
+                            <?php
+                                if(isset($_SESSION['username'])){
+                                    echo "  <li class='nav-item'>
+                                    <a class='n-link register' href='profile.php'>My account</a>
+                                    </li>";
+                                    
+                                }else{
+                                    echo " <li class='nav-item'>
+                                    <a class='n-link register' href='user_registration.php'>Register</a>
+                                    </li>";
+                
+                                }
+                            ?>
+                            
                             <li class="nav-item">
                             <a class="cart" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #00dd00;"></i><sup><?php cart_item(); ?></sup></a>
                             </li>
@@ -89,21 +102,29 @@
                 <p>Where Student Talent Shines, and Dreams Become Sales!</p>
 
                 <div class="heading-sub">
-                    <ul>
-                        <li><p>Welcome Guest</p></li>
+                <ul>
+                    <li><p>Welcome 
+                        <?php 
+                        if(isset($_SESSION['username'])) {
+                            echo $_SESSION['username'];
+                        }
+                        else{
+                            echo "guest"; 
+                        } 
+                        ?>
                         <?php
-                if(!isset($_SESSION['username'])){
-                    echo "  <li>
-                        <a class='btn-login' href='user_login.php'>Login</a>
+                        if(!isset($_SESSION['username'])) {
+                            echo "  <li>
+                                <a class='btn-login' href='user_login.php'>Login</a>
+                            </li>";
+                            
+                        }
+                        else{
+                            echo " <li>
+                            <a class='btn-login' href='user_logout.php'>Logout</a>
                     </li>";
-                    
-                }else{
-                    echo " <li>
-                    <a class='btn-login' href='user_logout.php'>Logout</a>
-                </li>";
 
-                }
-                    
+                        }               
                     ?>
                     </ul>
                 </div>

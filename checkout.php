@@ -29,6 +29,7 @@
 
     <!-- CSS link -->
     <link rel="stylesheet" href="css/product_details.css">
+    <link rel="stylesheet" href="css\footer.css">
 
 </head>
 <body>
