@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS link -->
-    <link rel="stylesheet" href="css/product_details.css">
+    <link rel="stylesheet" href="css/cart.css">
 
 </head>
 <body>
@@ -40,30 +40,36 @@
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
                     <img src="Image/big_logo.png" alt="" class="logo">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                            <a class="n-link" aria-current="page" href="index.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="n-link" href="all_products.php">Products</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="n-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="n-link register" href="user_registration.php">Register</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="cart" href="cart.php"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #00dd00;"></i><sup><?php cart_item(); ?></sup></a>
-                            </li>
-                            
+                    
+
+                    <!-- second child -->
+                    <nav style="color:white">
+                        <ul class="welcome">
+                            <li><p>Welcome 
+                                <?php 
+                                if(isset($_SESSION['username'])){
+                                    echo $_SESSION['username'];
+                                }
+                                else{
+                                    echo "guest"; 
+                                } 
+                                ?>
+                                <?php
+                                /*if(!isset($_SESSION['username'])){
+                                    echo "  <li>
+                                        <a class='btn-login' href='user_login.php'>Login</a>
+                                    </li>";
+                                    
+                                }
+                                else{
+                                    echo " <li>
+                                    <a class='btn-login' href='user_logout.php'>Logout</a>
+                                </li>";
+
+                                } */              
+                                ?>
                         </ul>
-                       
-                    </div>
+                    </nav>
                 </div>
             </nav>
             <!-- end first child -->
@@ -71,53 +77,21 @@
 <!--            ******calling cart function  -->
 
             <?php
-            cart();
-
+                cart();
             ?>
-
-            <!-- second child -->
-            <nav class="heading-sub mb-4" style="background-color: #00dd00;">
-                <ul>
-                    <li><p>Welcome Guest</p></li>
-                    <?php
-                if(!isset($_SESSION['username'])){
-                    echo "  <li>
-                        <a class='btn-login' href='user_login.php'>Login</a>
-                    </li>";
-                    
-                }else{
-                    echo " <li>
-                    <a class='btn-login' href='user_logout.php'>Logout</a>
-                </li>";
-
-                }
-                    
-                    ?>
-                </ul>
-            </nav>
-
-        <!-- <div class="heading">
-            <h1>Empowering the Next Generation of Entrepreneurs</h1>
-            <p>Where Student Talent Shines, and Dreams Become Sales!</p>
-        </div> -->
-            <!-- end of second child -->
-        <!-- </div> -->
-
-        <!-- products -->
         
-
     </div>
 
         <div class="products">
             <!-- third child -->
-            <h1 class="text-center" style="color: #00dd00;">My Cart</h2>
+            <h3 class="text-center mt-4" style="color: black;">My Cart</h3>
             <!-- enf of third child -->
 
             <!-- fourth child table -->
             <div class="container">
                 <div class="row">
                     <form action="" method="post">
-                    <table class="table table-bordered text-center table-dark">
+                    <table class="table table-bordered text-center table-dark tab_bg">
                         
 
 <!-- "php code display dynamic data -->
@@ -181,9 +155,9 @@
                                 <td><input type="checkbox" name="removeItem[]" value="<?php echo $product_id; ?>"></td>
                                 <td>
                                     <!-- <button class="n-link">Update</button> -->
-                                    <input type="submit" value="Update Cart" class="n-link" name="update_cart">
+                                    <input type="submit" value="Update Cart" class="btn-2" name="update_cart">
                                     <!-- <button class="n-link">Remove</button> -->
-                                    <input type="submit" value="Remove Cart" class="n-link" name="remove_cart">
+                                    <input type="submit" value="Remove Cart" class="btn-2" name="remove_cart">
                                 </td>
                             </tr>
                             <?php
@@ -206,9 +180,9 @@
                              $result = mysqli_query($con, $cart_query);
                              $result_count = mysqli_num_rows($result);
                              if($result_count>0){
-                                echo "<h4 class='px-3'>Subtotal: <strong>$total_price/-</strong></h4>
-                                <input type='submit' value='Continue Shopping' class='n-link' name='continue_shopping'>
-                               <button class='p-3 py-2 border-0 n-link check'> <a href='checkout.php' class = 'text-decoration-none check'>Checkout</a></button>";
+                                echo "<h5>Subtotal: <strong style='font-weight:400'>$total_price/-</strong></h5>
+                                <input type='submit' value='Continue Shopping' class='btn-shopping' name='continue_shopping'>
+                               <button class='btn-2'><a href='checkout.php' class='btn-2'>Checkout</a></button>";
                              }else{
                                 echo "  <input type='submit' value='Continue Shopping' class='n-link' name='continue_shopping'>";
                              }
@@ -248,9 +222,9 @@
             <!-- end of fourth child -->
         </div>
 
-    <div class="footer">
-        <p>All right s reserved @ - Designed by Team 6 - 2023</p>
-    </div>
+        <?php
+         footer();
+        ?>
 
     <!-- Bootstrap JS link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 

@@ -3,6 +3,7 @@
 // including connection file
 include('connection.php');
 
+
 // getting products----------------------------------------------------------------------------------------------------------------------------------
 function getproducts() {
     global $con;
@@ -452,5 +453,9 @@ function get_user_order_details() {
     }
 }
 
-
+function footer() {
+    echo "<div class='footer'>
+        <p>All rights reserved @ - Designed by Team 6 - 2023</p>
+    </div>";
+}
 ?>

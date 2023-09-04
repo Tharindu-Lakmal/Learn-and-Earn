@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
 
+    <link rel="icon" href="Image/logo.png" />
+
     <!--bootstrap link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -20,74 +22,82 @@
 <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
 <!---->
 
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/user_registration.css">
+
 
 </head>
 <body>
-<div class="container-fluid my-3">
-    <h2 class="text-center">New User Registration</h2>
+    <div class="main-div">
+        <div class="container">
 
-    <div class="row d-flex align-item-center justify-content-center">
-        <div class="col-lg-12 col-xl-6 ">
-            <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-container">
 
-                <!--               username field-->
-                <div class="form-outline mb-3">
-                    <label for="user_username" class="form-label">Username</label>
-                    <input type="text" id="user_username" class="form-control"
-                        placeholder="Enter Your Username" autocomplete="off" required name="user_username"/>
-                </div>
+                <h2 class="text-center mb-3">New User Registration</h2>
+                    <form action="" method="post" enctype="multipart/form-data">
 
-<!--                email field-->
-                <div class="form-outline mb-3">
-                    <label for="user_email" class="form-label">Email</label>
-                    <input type="text" id="user_email" class="form-control"
-                           placeholder="Enter Your Email" autocomplete="off" required name="user_email"/>
-                </div>
+                    <!--               username field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_username" class="form-label">Username</label>
+                        <input type="text" id="user_username" class="form-control"
+                            placeholder="Enter Your Username" autocomplete="off" required name="user_username"/>
+                    </div>
 
-<!--                Image field-->
-                <div class="form-outline mb-3">
-                    <label for="user_image" class="form-label">User Image</label>
-                    <input type="file" id="user_image" class="form-control"
-                           required name="user_image"/>
-                </div>
+    <!--                email field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="text" id="user_email" class="form-control"
+                            placeholder="Enter Your Email" autocomplete="off" required name="user_email"/>
+                    </div>
 
-                <!--                Password field-->
-                <div class="form-outline mb-3">
-                    <label for="user_password" class="form-label">Password</label>
-                    <input type="password" id="user_password" class="form-control"
-                           placeholder="Enter Your Password" autocomplete="off" required name="user_password"/>
-                </div>
+    <!--                Image field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_image" class="form-label">User Image</label>
+                        <input type="file" id="user_image" class="form-control"
+                            required name="user_image"/>
+                    </div>
 
-                <!--                Confirm password field-->
-                <div class="form-outline mb-3">
-                    <label for="conf_user_password" class="form-label">Confirm Password</label>
-                    <input type="password" id="conf_user_password" class="form-control"
-                           placeholder="Confirm Password" autocomplete="off" required name="conf_user_password"/>
-                </div>
+                    <!--                Password field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_password" class="form-label">Password</label>
+                        <input type="password" id="user_password" class="form-control"
+                            placeholder="Enter Your Password" autocomplete="off" required name="user_password"/>
+                    </div>
 
-                <!--               user address field-->
-                <div class="form-outline mb-3">
-                    <label for="user_address" class="form-label">Address</label>
-                    <input type="text" id="user_address" class="form-control"
-                           placeholder="Enter Your Address" autocomplete="off" required name="user_address"/>
-                </div>
+                    <!--                Confirm password field-->
+                    <div class="form-outline mb-3">
+                        <label for="conf_user_password" class="form-label">Confirm Password</label>
+                        <input type="password" id="conf_user_password" class="form-control"
+                            placeholder="Confirm Password" autocomplete="off" required name="conf_user_password"/>
+                    </div>
 
-                <!--               Contact field-->
-                <div class="form-outline mb-3">
-                    <label for="user_contact" class="form-label">Contact</label>
-                    <input type="text" id="user_contact" class="form-control"
-                           placeholder="Enter Your mobile number" autocomplete="off" required name="user_contact"/>
-                </div>
+                    <!--               user address field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_address" class="form-label">Address</label>
+                        <input type="text" id="user_address" class="form-control"
+                            placeholder="Enter Your Address" autocomplete="off" required name="user_address"/>
+                    </div>
 
-                <div class="mt-3 pt-2">
-                    <input type="submit" value="Register" class="bg-info py-2 px-3 border-0" name="user_register">
-                    <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account ? <a href="user_login.php" class="text-danger">Login</a></p>
-                </div>
+                    <!--               Contact field-->
+                    <div class="form-outline mb-3">
+                        <label for="user_contact" class="form-label">Contact</label>
+                        <input type="text" id="user_contact" class="form-control"
+                            placeholder="Enter Your mobile number" autocomplete="off" required name="user_contact"/>
+                    </div>
 
-            </form>
+                    <div class="mt-3 pt-2">
+                        <input type="submit" value="Register" class="btn0 btn-p" name="user_register">
+                        <p class="have_account">Already have an account ? <a href="user_login.php" style="color: red;">Login</a></p>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 </html>
