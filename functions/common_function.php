@@ -12,7 +12,7 @@ function getproducts() {
     if(!isset($_GET['category'])) {
         if(!isset($_GET['brand'])) {
 
-            $select_query = "Select * from products order by rand() limit 0,6"; //limit 0,5
+            $select_query = "Select * from products order by rand() limit 0,5"; //limit 0,5
             $result_query = mysqli_query($con, $select_query);
             // $row = mysqli_fetch_assoc($result_query);
             // echo $row['product_title'];
