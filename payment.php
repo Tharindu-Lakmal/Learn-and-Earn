@@ -26,7 +26,10 @@ include('functions/common_function.php');
         margin-top: 15px;
         margin-left: 0;
     }
-
+    .payy p {
+        margin-top: 50px;
+        margin-left: 20px;
+    }
     .pn {
         background-color: #FF3333;
         opacity: 0.7;
@@ -38,13 +41,17 @@ include('functions/common_function.php');
     p {
         color: #ffffff;
     }
+    h2{
+        margin-top: 100px;
+    }
     .pn:hover {
         background-color: red;
         color: #ffffff;
     }
     img {
-        width: 450px;
-        margin-left: 150px;
+        width: 500px;
+        height: auto;
+        margin-left: 100px;
         margin-bottom: 50px;
         display: block;
     }
@@ -53,6 +60,9 @@ include('functions/common_function.php');
         margin-top: 5px;
         margin-left: 20px;
         margin-bottom: 20px;
+    }
+    a{
+        margin-top: 100px;
     }
 </style>
 <body>
@@ -70,7 +80,7 @@ include('functions/common_function.php');
         <div class="col-md-6 pa">
             <a href="https://www.paypal.com/lk/home"><img src="image/pay.png" alt=""></a>
         </div>
-        <div class="col-md-6 payy m-auto">
+        <div class="col-md-6 payy">
             <a href="order.php?user_id=<?php echo $user_id; ?>" class="text-decoration-none"><p class="text-center pn">Pay Now</p></a>
         </div>
     </div>
